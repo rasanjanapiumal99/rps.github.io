@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit Converter</title>
+</head>
+<body>
+  <h1>Unit Converter</h1>
+  <label for="inputValue">Enter Value:</label>
+  <input type="number" id="inputValue" />
+  
+  <label for="sourceCategory">Source Category:</label>
+  <select id="sourceCategory" onchange="populateUnits()">
+    <option value="length">Length</option>
+    <option value="mass">Mass</option>
+    <option value="time">Time</option>
+    <option value="volume">Volume</option>
+    <option value="fluid_volume">Fluid Volume</option>
+    <option value="velocity">Velocity</option>
+    <option value="force">Force</option>
+    <option value="energy">Energy</option>
+    <option value="power">Power</option>
+    <option value="density">Density</option>
+    <option value="pressure">Pressure</option>
+    <option value="electric_current">Electric Current</option>
+    <option value="potential_difference">Potential Difference</option>
+    <option value="electrical_resistance">Electrical Resistance</option>
+    <option value="frequency">Frequency</option>
+    <option value="temperature">Temperature</option>
+  </select>
+  
+  <label for="sourceUnit">Source Unit:</label>
+  <select id="sourceUnit">
+    <!-- Options will be populated dynamically -->
+  </select>
+  
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+  
+  <script src="converter.js"></script>
+</body>
+</html>
